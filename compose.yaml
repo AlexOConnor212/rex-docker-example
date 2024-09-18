@@ -1,0 +1,8 @@
+services:
+  rex:
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - ~/.ssh:/root/.ssh
+    working_dir: /usr/src/app
+    command: ["rex", "uptime"]
